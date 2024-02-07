@@ -34,13 +34,13 @@
                     </div>                     
                 @endif
                 <div class="card">
-                    <div class="card-header text-center bg-dark text-white">
+                    <div class="card-header text-center bg-light text-black">
                         <strong>MI PERFIL</strong>
-                        <a href="{{ route('perfiles.editCliente', auth()->user()->id) }}" class="btn btn-outline-light btn-sm float-end">Modificar Perfil</a>
+                        <a href="{{ route('perfiles.editCliente', auth()->user()->id) }}" class="btn btn-outline-dark btn-sm float-end">Modificar Perfil</a>
                     </div>
-                    <div class="card-body col table-responsive bg-dark">
+                    <div class="card-body col table-responsive bg-light">
                         <!-- Mostraremos el listado de datos del usuario en formato tabla -->
-                        <table class="table table-hover table-sm table-dark text white">
+                        <table class="table table-hover table-sm table-light text black">
                             <thead>
                                 <th>Nombre</th>
                                 <th>Email</th>

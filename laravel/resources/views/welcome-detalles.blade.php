@@ -3,56 +3,33 @@
             
     <!-- Mostramos las camisetas de oferta a cualquier cliente que entre a la web (sin necesidad de estar autenticado) -->            
     <div class="container">
-        <div class="row" style="margin-top: 30px;">
-            <div class="col-md-12">                    
-                <div class="card">
-                    <div class="card-header text-center" style="background-color: #F1F3F5; color: black; border-color: #343a40;">    
-                        <strong>CAMISETAS EN VENTA</strong>
-                    </div>
-                    <div class="card-body col table-responsive bg-dark" style="padding-bottom: 43px;">
-                        <!-- Mostraremos el listado de camisetas en formato tabla -->
-                        <table class="table table-hover table-sm table-dark text white">
-                            <thead>
-                                <th>Marca</th>
-                                <th>Modelo</th>
-                                <th>Características</th>
-                                <th>Imagen</th>
-                                <th>Precio</th>
-                                <th>Descuento</th>                                    
-                                <th>Stock</th>
-                            </thead>
-                            <tbody>
-                                @foreach($camisetas as $camiseta)
-                                <tr>
-                                    <td>
-                                        {{ $camiseta->marca }}
-                                    </td>
-                                    <td>
-                                        {{ $camiseta->modelo }}
-                                    </td>
-                                    <td>
-                                        {{ $camiseta->caracteristicas }}
-                                    </td>
-                                    <td>
-                                    <a href="{{ route('welcome-elegida', $camiseta->id) }}"><img class="ms-3" src="{{ asset($camiseta->imagen) }}" style="width:25px; border-radius:5px;"></a>
-                                    </td>
-                                    <td>
-                                        {{ $camiseta->precio }} <?php echo" €"; ?>
-                                    </td>
-                                    <td>
-                                        {{ $camiseta->descuento }} <?php echo"%"; ?>
-                                    </td>   
-                                    <td>
-                                        {{ $camiseta->stock }} <?php echo" uds"; ?>
-                                    </td>                                                                         
-                                </tr>
-                                @endforeach 
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>    
+                <h2 class="text-center">CAMISETAS EN OFERTA</h2>
+                        <div class="row">
+                                 @foreach($camisetas as $camiseta)
+
+                                <div class="col-4">
+                                    <div class="card" style="width:100%;">
+						  			<a href="{{ route('welcome-elegida', $camiseta->id) }}"><img class="card-img-top" src="{{ asset($camiseta->imagen) }}" style=""></a>
+						  			<div class="card-body">
+						    		<h4 class="card-title">{{ $camiseta->modelo}}</h4>
+						   			<p class="card-text">{{ $camiseta->marca}}</p>
+						    		<p class="card-text">{{ $camiseta->caracteristicas}}</p>
+                                    <p class="card-text">{{ $camiseta->precio}} <?php echo "€" ?></p>
+                                    <p class="card-text">{{ $camiseta->descuento}} <?php echo "%" ?></p>
+                                    <p class="card-text">{{ $camiseta->stock}} <?php echo "uds" ?></p>
+						  			</div>
+                                </div>
+                                    
+								</div>
+                                    @endforeach 
+                        </div>
+                        
+                            <!-- Mostraremos el listado de camisetas en formato tabla -->
+                            
+                               
+                                </tbody>
+                            </table>
+                        </div>
+        </div>    
 
 @endsection

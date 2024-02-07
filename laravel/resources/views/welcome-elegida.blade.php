@@ -6,12 +6,12 @@
         <div class="row" style="margin-top: 30px;">
             <div class="col-md-12">                    
                 <div class="card">
-                    <div class="card-header text-center" style="background-color: #F1F3F5; color: black; border-color: #343a40;">    
+                    <div class="card-header text-center" style="background-color: white; color: black; border-color: #343a40;">    
                         <strong>@foreach($camisetas as $camiseta) {{ $camiseta->marca }} {{ $camiseta->modelo }} @endforeach</strong>
                     </div>
-                    <div class="card-body col table-responsive bg-dark" style="padding-bottom: 43px;">
+                    <div class="card-body col table-responsive bg-light" style="padding-bottom: 43px;">
                         <!-- Mostraremos el listado de camisetas en formato tabla -->
-                        <table class="table table-hover table-sm table-dark text white">
+                        <table class="table table-hover table-sm table-light text black">
                             <thead>
                                 <tr>
                                     @foreach($camisetas as $camiseta) 

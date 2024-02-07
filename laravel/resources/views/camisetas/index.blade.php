@@ -34,13 +34,13 @@
                     </div>                     
                 @endif
                 <div class="card">
-                    <div class="card-header text-center bg-dark text-white">
+                    <div class="card-header text-center bg-light text-black">
                         <strong>ADMINISTRAR CAMISETAS</strong>
-                        <a href="{{ route('camisetas.create') }}" class="btn btn-outline-light btn-sm float-end">Nueva Camiseta</a>
+                        <a href="{{ route('camisetas.create') }}" class="btn btn-outline-dark btn-sm float-end">Nueva Camiseta</a>
                     </div>
-                    <div class="card-body col table-responsive bg-dark">
+                    <div class="card-body col table-responsive bg-light">
                         <!-- Mostraremos el listado de camisetas en formato tabla -->
-                        <table class="table table-hover table-sm table-dark text white">
+                        <table class="table table-hover table-sm table-light text black">
                             <thead>
                                 <th>Marca</th>
                                 <th>Modelo</th>

@@ -34,12 +34,12 @@
                     </div>                     
                 @endif
                 <div class="card">
-                    <div class="card-header text-center bg-dark text-white">
+                    <div class="card-header text-center bg-light text-black">
                         <strong>ADMINISTRAR CUENTAS</strong>
                     </div>
-                    <div class="card-body col table-responsive bg-dark">
+                    <div class="card-body col table-responsive bg-light">
                         <!-- Mostraremos el listado de cuentas de usuario en formato tabla -->
-                        <table class="table table-hover table-sm table-dark text white">
+                        <table class="table table-hover table-sm table-light text black">
                             <thead>
                                 <th>NIF</th>
                                 <th>Nombre</th>
