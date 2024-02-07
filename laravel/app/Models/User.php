@@ -21,6 +21,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        /* AÑADIMOS los campos adicionales ya que Laravel está usando la inserción masiva por defecto para el formulario de registro */
+        /* Sin esto, los datos del formulario no se guardan en la base de datos */
+        'nif',
+        'direccion',
+        'telefono',
+        'is_admin',
+        'activo',
     ];
 
     /**

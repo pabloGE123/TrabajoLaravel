@@ -20,6 +20,11 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->string('nif',9)->unique()->nullable();
+            $table->string('direccion')->nullable();
+            $table->integer('telefono')->nullable();
+            $table->boolean('is_admin')->default(0); /* Tipo de usuario: Cliente(0)/Administrador(1) (Cuenta Cliente por defecto) */
+            $table->boolean('activo')->default(0);  /*Indica si la cuenta del usuario está Inactiva(0)/Activa(1) (Cuenta Inactiva por defecto)*/
             $table->timestamps();
         });
     }
